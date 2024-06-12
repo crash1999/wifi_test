@@ -13,7 +13,7 @@ microIoT.microIoT_WIFI("HUAWEI-4464", "12515016")
 microIoT.microIoT_showUserText(0, "Doing nothing")
 microIoT.microIoT_MQTT("9BpjrHUSR",
     "9ftC9H8Igz",
-    "XrqrNUIg",
+    "-XrqrNUIg",
     microIoT.SERVERS.CHINA)
 
 def on_forever():
