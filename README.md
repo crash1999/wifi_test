@@ -34,10 +34,6 @@ To edit this repository in MakeCode.
 The DFRobot micro:IoT is an affordable expansion board based on the microbit; it has several feature that makes it a good solution for education about IoT. It can be found at https://www.dfrobot.com/product-1926.html?tracking=5d9d760421f87
 The board offers 3 pin connectors for the GPIO and 2 wire connectors for DC motor, I2C interface, RGB LEDs and an OLED display. 
 
-## Code Block
-
-![codeBlockWifi](image/Codeblock/BLock.jpg)
-
 ## Internet connection
 
 The board connects easily at the microbit and it makes it possible (according to the manufacturer) to communicate via IFTT, Thingspeak, and a DFRobot server. All of the possibilities were tested and the aim of this work is to show how to send and receive data in the easiest way and what are the limits of this system. 
@@ -88,7 +84,9 @@ Also, another problem with sending and receiving the message is that when the me
 
 The manufacturer states that it is possible to use IFTTT and Thingspeak; none of these are free to use. Some educational institution has access to Thinkgspeak, but it is not easier than the DFRobot server. Also with this expansion board, it is not possible to use internet with different protocols or connect to other servers because the firmware is missing. It is not possible also to ping another device on the local network, making the application for this device very limited. It is possible to not use this board but to connect to a PC via Bluetooth or USB and send data to a web app that runs on the PC; in that way, it is possible to overcome all the limits of this expansion board. Building a web app is not recommended to a beginner and so it is out of the scope of this work. A similar work that uses a web app made with GoogleSheet can be found at https://github.com/ferrygun/micro-bit-GoogleSheets
 
+## Code Block
 
+![codeBlockWifi](image/Codeblock/BLock.jpg)
 
 
 
