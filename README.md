@@ -66,4 +66,11 @@ Anyway it is possible to send a string to the microcontrollerin its topic.
 It is possible to send and recieve data on the same microbit in the same script; unfortunately this has to work on the same topic. It is not possible to communicate or recieve data from different topics in the same script (for example sending datas on topic 0 and recieve on topic 1) and there is no workaround for this because the DFRobot server is designed to think one topic as one device. 
 Also another problem of sending and recieving the message is that when the message will sent il will arrive correctly to the server but the microbit will see a ghost message that is sent back from the server (in reality the server is not sanding anything) that contains exactly the string that was sent. This can be handled sending numbers and check if the recieved message is a number, then discard it; in this way letters can be used as data sent from the server to the microbit. 
 
+## Other communication protocols
+
+The manufacturer states that it is possible to use IFTTT and thingspeak; none of this are free to use. Some educational institution has accses to thinkgspeak, but it is not easier than the DFRobot server. Also with this expantion board it is not possible to use internet with different protocols or connecting to other server because the firmware is missing. It is not possible also to ping another device on the local network, making the application for this device very limitd. It is possible to not use this board but to connecto to a PC via bluetooth or USB and send data to a webapp that runs on the PC; in that way it is possible to overcome all the limits of this expantion board. Building a webapp it is not recommanded to a beginner and so it is out of the scope of this work. A similar work that uses a webapp made with GoogleSheet can be found at https://github.com/ferrygun/micro-bit-GoogleSheets
+
+
+
+
 
