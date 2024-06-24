@@ -59,6 +59,8 @@ On the topic of the server page there is the possibility to plot a graph of the 
 On the DFRobot server there is the possibility to send a message to the microcontroller; the message can be sendend only manually and there is no possibility to insert some script to send it autimatically. This is a limitation fot the IoT application because this make impossible the communication between two Microbit. 
 Anyway it is possible to send a string to the microcontrollerin its topic. 
 
+[!receiving](image/DFrobot/sending_datas.png)
+
 ## Sending and Recieving
 
 It is possible to send and recieve data on the same microbit in the same script; unfortunately this has to work on the same topic. It is not possible to communicate or recieve data from different topics in the same script (for example sending datas on topic 0 and recieve on topic 1) and there is no workaround for this because the DFRobot server is designed to think one topic as one device. 
