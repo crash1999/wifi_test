@@ -39,7 +39,7 @@ The board offers 3 pin connectors for the GPIO and 2 wire connectors for DC moto
 ![code1](image/Codeblock/ConnectWiFi.jpeg)
 ![code2](image/Codeblock/MQTT.jpeg)
 ![code3](image/Codeblock/Sending.jpeg)
-![code4](image/Codeblock/Write_recieved_message.jpeg)
+![code4](image/Codeblock/Write%20recieved%20message.jpeg)
 
 ## Internet connection
 
