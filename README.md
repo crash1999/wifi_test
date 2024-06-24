@@ -53,3 +53,15 @@ On the Microbit there is the MQTT setup to initialize this communication and onl
 On the topic of the server page there is the possibility to plot a graph of the data and there is also the possibility to download the data as an [exel](https://github.com/crash1999/wifi_test/blob/master/Easy%20IOT%20Micro_bit%20Date%202024_06_17%2015_00%202024_06_18%2016_00%20Key%20undefined.xlsx) file. 
 
 ![Graph](image/DFrobot/Graph%20of%20incoming%20datas.png)
+
+## Recieving data
+
+On the DFRobot server there is the possibility to send a message to the microcontroller; the message can be sendend only manually and there is no possibility to insert some script to send it autimatically. This is a limitation fot the IoT application because this make impossible the communication between two Microbit. 
+Anyway it is possible to send a string to the microcontrollerin its topic. 
+
+## Sending and Recieving
+
+It is possible to send and recieve data on the same microbit in the same script; unfortunately this has to work on the same topic. It is not possible to communicate or recieve data from different topics in the same script (for example sending datas on topic 0 and recieve on topic 1) and there is no workaround for this because the DFRobot server is designed to think one topic as one device. 
+Also another problem of sending and recieving the message is that when the message will sent il will arrive correctly to the server but the microbit will see a ghost message that is sent back from the server (in reality the server is not sanding anything) that contains exactly the string that was sent. This can be handled sending numbers and check if the recieved message is a number, then discard it; in this way letters can be used as data sent from the server to the microbit. 
+
+
