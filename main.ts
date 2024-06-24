@@ -1,3 +1,9 @@
+microIoT.microIoT_MQTT_Event(microIoT.TOPIC.topic_0, function (message) {
+    microIoT.microIoT_clear()
+    microIoT.microIoT_showUserText(0, "The message is:")
+    microIoT.microIoT_showUserText(1, message)
+    basic.pause(2000)
+})
 input.onButtonPressed(Button.A, function () {
     microIoT.microIoT_showUserText(0, "Try to send")
     microIoT.microIoT_showUserText(1, "a message")
@@ -8,8 +14,8 @@ input.onButtonPressed(Button.A, function () {
 })
 let var2 = 0
 microIoT.microIoT_initDisplay()
-// microIoT.microIoT_WIFI("POCO F5 Pro", "Polpetta96")
-microIoT.microIoT_WIFI("HUAWEI-4464", "12515016")
+microIoT.microIoT_WIFI("POCO F5 Pro", "Polpetta96")
+// microIoT.microIoT_WIFI("HUAWEI-4464", "12515016")
 microIoT.microIoT_showUserText(0, "Doing nothing")
 microIoT.microIoT_MQTT(
 "9BpjrHUSR",
@@ -18,13 +24,16 @@ microIoT.microIoT_MQTT(
 microIoT.SERVERS.English
 )
 basic.forever(function () {
-    let _var2: number;
-microIoT.microIoT_showUserText(0, "Sending " + convertToText(var2))
-    microIoT.microIoT_SendMessage(convertToText(var2), microIoT.TOPIC.topic_0)
-    var2 = var2 + 1
-    if (var2 == 101) {
-        var2 = 0
+    if (!(input.buttonIsPressed(Button.B))) {
+        basic.pause(1000)
+    } else {
+        microIoT.microIoT_showUserText(0, "Sending " + convertToText(var2))
+        microIoT.microIoT_SendMessage(convertToText(var2), microIoT.TOPIC.topic_0)
+        var2 = var2 + 1
+        if (var2 == 101) {
+            var2 = 0
+        }
+        basic.pause(100)
+        microIoT.microIoT_clear()
     }
-    basic.pause(1000)
-    microIoT.microIoT_clear()
 })
