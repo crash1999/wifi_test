@@ -36,7 +36,7 @@ The board offers 3 pin connectors for the GPIO and 2 wire connectors for DC moto
 
 ## Code Block
 
-
+![codeBlockWifi](image/Codeblock/BLock.jpg)
 
 ## Internet connection
 
