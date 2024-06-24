@@ -84,9 +84,9 @@ Also, another problem with sending and receiving the message is that when the me
 
 The manufacturer states that it is possible to use IFTTT and Thingspeak; none of these are free to use. Some educational institution has access to Thinkgspeak, but it is not easier than the DFRobot server. Also with this expansion board, it is not possible to use internet with different protocols or connect to other servers because the firmware is missing. It is not possible also to ping another device on the local network, making the application for this device very limited. It is possible to not use this board but to connect to a PC via Bluetooth or USB and send data to a web app that runs on the PC; in that way, it is possible to overcome all the limits of this expansion board. Building a web app is not recommended to a beginner and so it is out of the scope of this work. A similar work that uses a web app made with GoogleSheet can be found at https://github.com/ferrygun/micro-bit-GoogleSheets
 
-## Code Block
+## Code Blocks
 
 ![codeBlockWifi](image/Codeblock/BLock.jpg)
 
-
+This program implements the commmunication via MQTT with the DFRobot server; in the on start block there are all the initialization: all the filelds have to be populated by the personal data of the user (WiFi and DFRobot server account). After the initialization the program will send data that are numbers from 0 to 100 to the server and a plot similar to the one at the beginning can be produced. There is also the possibility to interrupt this data and send a custom value by pressing the button A; in this case the custom value is 10 but it can be any character because it is a string. Also there is the part where a message from the server can be captured, wich is on the same topic than the data sent; it is not possible to send and recieve data in different topics. For debug reason the message are printed on the OLED display and in this way they are printed the ghost messages that are captured from the data sent and not from the server. 
 
