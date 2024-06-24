@@ -43,5 +43,8 @@ The expantion board connects to WiFi with the dedicated block "setup WiFi name a
 ## Sending data
 
 The easiest way to send data to a server is to use the DFRobot server. The server requires the setup of an account that has to be setup via phone number because entering an email will lead to a page where a chinese phone number is required. Once the account is set up, there is the possibility to open the topics: a topic is a container for the data that are communicated with a device. 
+
+![Alt text](image/DFrobot/project dadtas.png)
+
 On the Microbit there is the MQTT setup to initialize this communication and only strings can be sendend as a message. The message can be sent at 100ms delay without any problem in this way. 
 On the topic of the server page there is the possibility to plot a graph of the data and there is also the possibility to download the data as an exel file. 
