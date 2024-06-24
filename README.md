@@ -64,7 +64,7 @@ On the topic of the server page, there is the possibility to plot a graph of the
 
 ![Graph](image/DFrobot/Graph%20of%20incoming%20datas.png)
 
-## Recieving data
+## Receiving data
 
 On the DFRobot server, there is the possibility to send a message to the microcontroller; the message can be sent only manually and there is no possibility to insert some script to send it automatically. 
 
@@ -78,7 +78,7 @@ Anyway, it is possible to send a string to the microcontroller its topic.
 ## Sending and Receiving
 
 It is possible to send and receive data on the same microbit in the same script; unfortunately, this has to work on the same topic. It is not possible to communicate or receive data from different topics in the same script (for example sending data on topic 0 and receiving it on topic 1) and there is no workaround for this because the DFRobot server is designed to think of one topic as one device. 
-Also, another problem with sending and receiving the message is that when the message is sent il will arrive correctly to the server but the microbit will see a ghost message that is sent back from the server (in reality the server is not sanding anything) that contains exactly the string that was sent. This can be handled by sending numbers and checking if the received message is a number, then discarding it; in this way, letters can be used as data sent from the server to the microbit. 
+Also, another problem with sending and receiving the message is that when the message is sent it will arrive correctly to the server but the microbit will see a ghost message that is sent back from the server (in reality the server is not sanding anything) that contains exactly the string that was sent. This can be handled by sending numbers and checking if the received message is a number, then discarding it; in this way, letters can be used as data sent from the server to the microbit. 
 
 ## Other communication protocols
 
@@ -88,5 +88,5 @@ The manufacturer states that it is possible to use IFTTT and Thingspeak; none of
 
 ![codeBlockWifi](image/Codeblock/BLock.jpg)
 
-This program implements the commmunication via MQTT with the DFRobot server; in the on start block there are all the initialization: all the filelds have to be populated by the personal data of the user (WiFi and DFRobot server account). After the initialization the program will send data that are numbers from 0 to 100 to the server and a plot similar to the one at the beginning can be produced. There is also the possibility to interrupt this data and send a custom value by pressing the button A; in this case the custom value is 10 but it can be any character because it is a string. Also there is the part where a message from the server can be captured, wich is on the same topic than the data sent; it is not possible to send and recieve data in different topics. For debug reason the message are printed on the OLED display and in this way they are printed the ghost messages that are captured from the data sent and not from the server. 
+This program implements the communication via MQTT with the DFRobot server; in the on start block, there is all the initialization: all the files have to be populated by the personal data of the user (WiFi and DFRobot server account). After the initialization the program will send data that are numbers from 0 to 100 to the server and a plot similar to the one at the beginning can be produced. There is also the possibility to interrupt this data and send a custom value by pressing the button A; in this case, the custom value is 10 but it can be any character because it is a string. Also, there is the part where a message from the server can be captured, which is on the same topic then the data sent; it is not possible to send and receive data on different topics. For debugging1 reasons the messages are printed on the OLED display and in this way they are printed the ghost messages that are captured from the data sent and not from the server. 
 
